@@ -1,5 +1,5 @@
 technologies = {
- #测试
+#测试
 	@1918 = 0
 	@1936 = 2
 	@1938 = 4
@@ -423,54 +423,64 @@ technologies = {
 		}
 	}
 
-	basic_medium_tank_chassis = { #Panzer III
-
+	basic_medium_tank_chassis = { # 三号坦克底盘
+		# 基础中型坦克底盘技术
 		enable_equipments = {
-			modern_tank_chassis_1
+			modern_tank_chassis_1  # 启用现代坦克底盘1
 		}
 
 		enable_subunits = {
-			modern_armor
-			mbt_company
+			modern_armor  # 启用现代装甲单位
+			mbt_company  # 启用主战坦克连
 		}
 		
 		enable_equipment_modules = {
-			tank_high_velocity_cannon
-			tank_heavy_cannon
-			gunner_optical_sight
-			tank_3_man_tank_turret
-			tank_modern_tank_turret
+			tank_high_velocity_cannon  # 启用坦克高速火炮
+			tank_heavy_cannon  # 启用坦克重型火炮
+			gunner_optical_sight  # 启用炮手光学瞄准具
+			tank_3_man_tank_turret  # 启用三人坦克炮塔
+			tank_modern_tank_turret  # 启用现代坦克炮塔
 		}
 		
 		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
+			NOT = {    has_template_containing_unit = light_armor }
+			NOT = {    has_template_containing_unit = heavy_armor }
+			NOT = {    has_template_containing_unit = medium_armor }
 		}
-
 		path = {
-			leads_to_tech = improved_medium_tank_chassis
+			leads_to_tech = improved_medium_tank_chassis  # 通向改进的中型坦克底盘
 			research_cost_coeff = 1
 		}
-
 		path = {
-			leads_to_tech = amphibious_tank_chassis
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = auto_loader_tech
+			leads_to_tech = amphibious_tank_chassis  # 通向水陆两栖坦克底盘
 			research_cost_coeff = 1
 		}
 		
 		path = {
-			leads_to_tech = blow_out_compartment_tech
+			leads_to_tech = auto_loader_tech  # 通向自动装弹机技术
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = blow_out_compartment_tech  # 通向爆炸物排出舱技术
+			research_cost_coeff = 1
+		}
+		
+		# 新增两条独立的弹药科技树路径
+		path = {
+			leads_to_tech = apfsds_tech  # 直接通向尾翼稳定脱壳穿甲弹技术
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = heatfs_tech  # 直接通向高爆反坦克脱壳弹技术
 			research_cost_coeff = 1
 		}
 
 		research_cost = 2
-		start_year = 1980
 
+		start_year = 1980
+		
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 2 y = 0 }
@@ -558,9 +568,9 @@ technologies = {
 	}
 	
 	turret_mounted_atgm_tech = {
-	
+		# 炮塔安装反坦克导弹技术
 		enable_equipment_modules = {
-			turret_mounted_atgm
+			turret_mounted_atgm  # 启用炮塔安装反坦克导弹模块
 		}
 		
 		show_effect_as_desc = yes
@@ -568,12 +578,10 @@ technologies = {
 		start_year = 2021
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -3 y = 3 }
+			position = { x = 1 y = 8 }
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -583,65 +591,19 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
 	
-	apds_tech = {
-		
-		path = {
-			leads_to_tech = heat_tech
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = turret_mounted_mg_tech
-			research_cost_coeff = 1
-		}
-	
-		modern_armor = {
-			hard_attack = 0.05
-			breakthrough = 0.05
-		}
-		
-		light_armor = {
-			hard_attack = 0.05
-			breakthrough = 0.05
-		}
-		
-		show_effect_as_desc = yes
-		research_cost = 1.0
-		start_year = 1980
-		folder = {
-			name = nsb_armour_folder
-			position = { x = -1 y = 1 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
 	
 	turret_mounted_mg_tech = {
+		# 炮塔安装机枪技术
+		# 现在独立存在，不再与APDS相连
 		
 		enable_equipment_modules = {
-			tank_heavy_machine_gun
-		}		
+			tank_heavy_machine_gun  # 启用坦克重机枪模块
+		}        
 		show_effect_as_desc = yes
 		research_cost = 1.0
 		start_year = 1980
@@ -649,10 +611,8 @@ technologies = {
 			name = nsb_armour_folder
 			position = { x = -3 y = 1 }
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -662,7 +622,6 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
@@ -670,57 +629,56 @@ technologies = {
 
 	
 	apfsds_tech = {
-	
+		# 尾翼稳定脱壳穿甲弹技术
+		# 作为独立科技树的一部分，不再需要之前的APDS和HEAT作为前置
+		
 		path = {
-			leads_to_tech = auto_cannon_tech
+			leads_to_tech = auto_cannon_tech  # 通向自动火炮技术
 			research_cost_coeff = 1
 		}
 		
 		path = {
-			leads_to_tech = heatfs_tech
+			leads_to_tech = heatfs_tech  # 通向高爆反坦克脱壳弹技术
 			research_cost_coeff = 1
 		}
-	
-		modern_armor = {
-			hard_attack = 0.05
-			breakthrough = 0.10
+		modern_armor = {  # 对现代装甲的加成
+			hard_attack = 0.05  # 增加5%硬攻击力（对装甲目标）
+			breakthrough = 0.10  # 增加10%突破能力
 		}
 		
-		light_armor = {
-			hard_attack = 0.05
-			breakthrough = 0.10
+		light_armor = {  # 对轻型装甲的加成
+			hard_attack = 0.05  # 增加5%硬攻击力
+			breakthrough = 0.10  # 增加10%突破能力
 		}
 		
-		show_effect_as_desc = yes
-		research_cost = 1.0
-		start_year = 2022
+		show_effect_as_desc = yes  # 在描述中显示效果
+		research_cost = 1.0  # 研究成本
+		start_year = 2022  # 起始年份
 		folder = {
-			name = nsb_armour_folder
-			position = { x = -1 y = 6 }
+			name = nsb_armour_folder  # 所在文件夹
+			position = { x = -1 y = 6 }  # 在科技树中的位置
 		}
-
-		ai_will_do = {
+		ai_will_do = {  # AI行为逻辑
 			factor = 1
-
 			modifier = {
 				factor = 2
-				is_major = yes
+				is_major = yes  # 主要国家优先研究
 			}
 			modifier = {
 				has_war = yes
-				factor = 2
+				factor = 2  # 战争中优先研究
 			}
 		}
-
 		categories = {
-			armor
+			armor  # 技术类别：装甲
 		}
 	}
 	
 	auto_cannon_tech = {
+		# 自动火炮技术
 		
 		enable_equipment_modules = {
-			tank_auto_cannon_2
+			tank_auto_cannon_2  # 启用坦克自动火炮模块2
 		}
 		
 		show_effect_as_desc = yes
@@ -730,10 +688,8 @@ technologies = {
 			name = nsb_armour_folder
 			position = { x = -3 y = 6 }
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -743,24 +699,29 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
 	
 	heatfs_tech = {
-	
+		# 高爆反坦克脱壳弹技术
+		# 现在作为独立科技树分支，不再依赖于HEAT
 		modern_armor = {
-			hard_attack = 0.05
+			hard_attack = 0.05  # 增加5%硬攻击力
 		}
 		
 		light_armor = {
-			hard_attack = 0.05
+			hard_attack = 0.05  # 增加5%硬攻击力
 		}
 		
 		path = {
-			leads_to_tech = turret_mounted_manpad_tech
+			leads_to_tech = turret_mounted_manpad_tech  # 通向炮塔安装便携式防空导弹技术
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = turret_mounted_atgm_tech  # 通向炮塔安装反坦克导弹技术
 			research_cost_coeff = 1
 		}
 		
@@ -771,10 +732,8 @@ technologies = {
 			name = nsb_armour_folder
 			position = { x = -1 y = 8 }
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -784,16 +743,15 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
 	
 	turret_mounted_manpad_tech = {
-	
+		# 炮塔安装便携式防空导弹技术
 		enable_equipment_modules = {
-			turret_mounted_manpad
+			turret_mounted_manpad  # 启用炮塔安装便携式防空导弹模块
 		}
 		
 		show_effect_as_desc = yes
@@ -803,10 +761,8 @@ technologies = {
 			name = nsb_armour_folder
 			position = { x = -3 y = 8 }
 		}
-
 		ai_will_do = {
 			factor = 1
-
 			modifier = {
 				factor = 2
 				is_major = yes
@@ -816,11 +772,11 @@ technologies = {
 				factor = 2
 			}
 		}
-
 		categories = {
 			armor
 		}
 	}
+	
 	
 	auto_loader_tech = {
 	
