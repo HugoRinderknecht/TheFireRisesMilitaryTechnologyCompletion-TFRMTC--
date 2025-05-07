@@ -1000,7 +1000,7 @@ guiTypes = { #NVX# Tag for changes
 					alwaystransparent = yes
 				}
 			
-				#科技时间线
+
 				containerWindowType = {
 					name = "armour_year_left"
 					position = { x=10 y=185 }
@@ -1099,7 +1099,7 @@ guiTypes = { #NVX# Tag for changes
 					}
 				}
 					
-				#研发时间线
+					
 				containerWindowType = {
 					name = "armour_year_right"
 					position = { x=-100 y=185 }
@@ -1273,6 +1273,7 @@ guiTypes = { #NVX# Tag for changes
 				}		
 			}	
 
+				
 			gridboxtype = {
 				name = "gwtank_chassis_tree"
 				position = { x = 10% y = 172 }
@@ -1290,15 +1291,7 @@ guiTypes = { #NVX# Tag for changes
 			}
 			
 			gridboxtype = {
-				name = "heatfs_tech"
-				position = { x = 70% y = 172 }
-				size = { width = 80% height = 80% }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-			
-			gridboxtype = {
-				name = "apfssds_tech_tree"
+				name = "apds_tech_tree"
 				position = { x = 70% y = 172 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
@@ -1321,7 +1314,6 @@ guiTypes = { #NVX# Tag for changes
 				format = "UP"
 			}
 
-			#装甲科技
 			gridboxtype = {
 				name = "armor_tech_1_tree"
 				position = { x = 37% y = 172 }
@@ -1329,8 +1321,7 @@ guiTypes = { #NVX# Tag for changes
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
-			
-			#引擎科技
+
 			gridboxtype = {
 				name = "engine_tech_1_tree"
 				position = { x = -22% y = 172 }
