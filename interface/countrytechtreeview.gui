@@ -1290,7 +1290,8 @@ guiTypes = { #NVX# Tag for changes
 				format = "UP"
 			}
 			
-			gridboxtype = {
+			#弹药科技树
+			gridboxtype = {	
 				name = "apds_tech_tree"
 				position = { x = 70% y = 172 }
 				size = { width = 80% height = 80% }
@@ -1298,6 +1299,7 @@ guiTypes = { #NVX# Tag for changes
 				format = "UP"
 			}
 			
+			#三人炮塔
 			gridboxtype = {
 				name = "three_man_turret_tech_tree"
 				position = { x = 70% y = 172 }
@@ -1306,6 +1308,7 @@ guiTypes = { #NVX# Tag for changes
 				format = "UP"
 			}
 			
+			#四人炮塔
 			gridboxtype = {
 				name = "four_man_turret_tech_tree"
 				position = { x = 70% y = 172 }
@@ -1314,6 +1317,7 @@ guiTypes = { #NVX# Tag for changes
 				format = "UP"
 			}
 
+			#装甲科技
 			gridboxtype = {
 				name = "armor_tech_1_tree"
 				position = { x = 37% y = 172 }
@@ -1322,6 +1326,7 @@ guiTypes = { #NVX# Tag for changes
 				format = "UP"
 			}
 
+			#引擎科技
 			gridboxtype = {
 				name = "engine_tech_1_tree"
 				position = { x = -22% y = 172 }
