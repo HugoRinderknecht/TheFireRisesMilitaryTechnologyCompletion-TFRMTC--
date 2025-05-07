@@ -1290,7 +1290,7 @@ guiTypes = { #NVX# Tag for changes
 			}
 			
 			gridboxtype = {
-				name = "heat_teach_tree"
+				name = "heatfs_tech"
 				position = { x = 70% y = 172 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
@@ -1298,7 +1298,7 @@ guiTypes = { #NVX# Tag for changes
 			}
 			
 			gridboxtype = {
-				name = "apds_tech_tree"
+				name = "apfssds_tech_tree"
 				position = { x = 70% y = 172 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
