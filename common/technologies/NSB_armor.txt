@@ -635,7 +635,7 @@ technologies = {
 	Penetrator_With_Enhanced_Lateral_Effect = {
 	
 		enable_equipment_modules = {
-			turret_mounted_manpad
+			Penetrator_With_Enhanced_Lateral_Effect
 		}
 		
 		path={
@@ -673,7 +673,7 @@ technologies = {
 	Active_Lateral_Penetrator = {
 	
 		enable_equipment_modules = {
-			turret_mounted_manpad
+			Active_Lateral_Penetrator
 		}
 		
 
@@ -827,7 +827,11 @@ technologies = {
 	
 	#尾翼稳定破甲弹
 	heatfs_tech = {
-	
+		
+		enable_equipment_modules = {
+			heatfs_tech
+		}
+
 		modern_armor = {
 			hard_attack = 0.05
 		}
@@ -836,11 +840,11 @@ technologies = {
 			hard_attack = 0.05
 		}
 		
-		path = {
-			leads_to_tech = turret_mounted_manpad_tech
-			research_cost_coeff = 1
+		path={
+			leads_to_tech=Short_range_air_defense_missile
+			research_cost_coeff=1
 		}
-	
+
 		path = {
 			leads_to_tech = Series_armor_piercing_bullets
 			research_cost_coeff=1
@@ -876,7 +880,7 @@ technologies = {
 	Series_armor_piercing_bullets = {
 		
 		enable_equipment_modules = {
-			turret_mounted_manpad
+			Series_armor_piercing_bullets
 		}
 		
 		path = {
@@ -917,7 +921,7 @@ technologies = {
 	Gun_Fired_Missile = {
 	
 		enable_equipment_modules = {
-			turret_mounted_manpad
+			Gun_Fired_Missile
 		}
 		
 		path ={
@@ -956,7 +960,7 @@ technologies = {
 	Gun_Fired_Tandem_Missiles = {
 	
 		enable_equipment_modules = {
-			turret_mounted_manpad
+			Gun_Fired_Tandem_Missiles
 		}
 		
 		show_effect_as_desc = yes
@@ -985,11 +989,21 @@ technologies = {
 		}
 	}
 
-	#炮塔防空导弹
-	turret_mounted_manpad_tech = {
+	#近程防空导弹
+	Short_range_air_defense_missile = {
+
+		path={
+			leads_to_tech= turret_mounted_manpad_tech
+			research_cost_coeff=1
+		 }
+
+		path={
+			leads_to_tech= Medium_range_air_defense_missile
+			research_cost_coeff=1
+		 }
 	
 		enable_equipment_modules = {
-			turret_mounted_manpad
+			Short_range_air_defense_missile
 		}
 		
 		show_effect_as_desc = yes
@@ -1017,7 +1031,112 @@ technologies = {
 			armor
 		}
 	}
+
+	#中程防空导弹
+	Medium_range_air_defense_missile = {
+
+		path={
+			leads_to_tech= Long_range_air_defense_missile
+			research_cost_coeff=1
+		 }
 	
+		enable_equipment_modules = {
+			Medium_range_air_defense_missile
+		}
+		
+		show_effect_as_desc = yes
+		research_cost = 1.0
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 7 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+	 
+
+	Long_range_air_defense_missile = {
+	
+		enable_equipment_modules = {
+			Long_range_air_defense_missile
+		}
+		
+		show_effect_as_desc = yes
+		research_cost = 1.0
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 9 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	#炮塔防空导弹
+	turret_mounted_manpad_tech = {
+
+		enable_equipment_modules = {
+			turret_mounted_manpad
+		}
+		
+		show_effect_as_desc = yes
+		research_cost = 1.0
+		start_year = 2024
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 4 y = 5 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+	
+
 	auto_loader_tech = {
 	
 		enable_equipment_modules = {
