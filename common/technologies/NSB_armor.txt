@@ -381,10 +381,7 @@ technologies = {
 		}
 		show_effect_as_desc = yes
 
-		path = {
-			leads_to_tech = main_battle_tank_chassis
-			research_cost_coeff = 1
-		}
+		
 
 		research_cost = 3.5
 		start_year = 2024
@@ -510,53 +507,7 @@ technologies = {
 		}
 	}
 	
-	heat_tech = {
-		
-		path = {
-			leads_to_tech = apfsds_tech
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = turret_mounted_atgm_tech
-			research_cost_coeff = 1
-		}
 	
-		modern_armor = {
-			soft_attack = 0.1
-			breakthrough = 0.05
-		}
-		
-		light_armor = {
-			soft_attack = 0.1
-			breakthrough = 0.05
-		}
-		
-		show_effect_as_desc = yes
-		research_cost = 1
-		start_year = 2021
-		folder = {
-			name = nsb_armour_folder
-			position = { x = -1 y = 3 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
 	
 	turret_mounted_atgm_tech = {
 	
@@ -593,14 +544,11 @@ technologies = {
 	apds_tech = {
 		
 		path = {
-			leads_to_tech = heat_tech
+			leads_to_tech = apfsds_tech
 			research_cost_coeff = 1
 		}
 		
-		path = {
-			leads_to_tech = turret_mounted_mg_tech
-			research_cost_coeff = 1
-		}
+		
 	
 		modern_armor = {
 			hard_attack = 0.05
@@ -617,7 +565,7 @@ technologies = {
 		start_year = 1980
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -1 y = 1 }
+			position = { x = -2 y = 1 }
 		}
 
 		ai_will_do = {
@@ -637,50 +585,11 @@ technologies = {
 			armor
 		}
 	}
-	
-	turret_mounted_mg_tech = {
-		
-		enable_equipment_modules = {
-			tank_heavy_machine_gun
-		}		
-		show_effect_as_desc = yes
-		research_cost = 1.0
-		start_year = 1980
-		folder = {
-			name = nsb_armour_folder
-			position = { x = -3 y = 1 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-			modifier = {
-				factor = 2
-				is_major = yes
-			}
-			modifier = {
-				has_war = yes
-				factor = 2
-			}
-		}
-
-		categories = {
-			armor
-		}
-	}
-
 	
 	apfsds_tech = {
 	
-		path = {
-			leads_to_tech = auto_cannon_tech
-			research_cost_coeff = 1
-		}
 		
-		path = {
-			leads_to_tech = heatfs_tech
-			research_cost_coeff = 1
-		}
+	
 	
 		modern_armor = {
 			hard_attack = 0.05
@@ -697,7 +606,7 @@ technologies = {
 		start_year = 2022
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -1 y = 6 }
+			position = { x = -2 y = 3 }
 		}
 
 		ai_will_do = {
@@ -717,6 +626,97 @@ technologies = {
 			armor
 		}
 	}
+
+
+
+	turret_mounted_mg_tech = {
+		
+		path = {
+			leads_to_tech = auto_cannon_tech
+			research_cost_coeff = 1
+		}
+		
+	
+		modern_armor = {
+			hard_attack = 0.05
+			breakthrough = 0.05
+		}
+		
+		light_armor = {
+			hard_attack = 0.05
+			breakthrough = 0.05
+		}
+		
+		show_effect_as_desc = yes
+		research_cost = 1.0
+		start_year = 1980
+		folder = {
+			name = nsb_armour_folder
+			position = { x = -4 y = 1 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+
+	heat_tech = {
+		
+		path = {
+			leads_to_tech = heatfs_tech
+			research_cost_coeff = 1
+		}
+		
+	
+		modern_armor = {
+			hard_attack = 0.05
+			breakthrough = 0.05
+		}
+		
+		light_armor = {
+			hard_attack = 0.05
+			breakthrough = 0.05
+		}
+		
+		show_effect_as_desc = yes
+		research_cost = 1.0
+		start_year = 1980
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 1 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+		}
+
+		categories = {
+			armor
+		}
+	}
+	
 	
 	auto_cannon_tech = {
 		
@@ -729,7 +729,7 @@ technologies = {
 		start_year = 2022
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -3 y = 6 }
+			position = { x = -4 y = 3 }
 		}
 
 		ai_will_do = {
@@ -770,7 +770,7 @@ technologies = {
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -1 y = 8 }
+			position = { x = 0 y = 3 }
 		}
 
 		ai_will_do = {
@@ -802,7 +802,7 @@ technologies = {
 		start_year = 2024
 		folder = {
 			name = nsb_armour_folder
-			position = { x = -3 y = 8 }
+			position = { x = 0 y = 5 }
 		}
 
 		ai_will_do = {

@@ -1299,6 +1299,22 @@ guiTypes = { #NVX# Tag for changes
 				format = "UP"
 			}
 			
+			gridboxtype = {	
+				name = "heat_tech_tree"
+				position = { x = 70% y = 172 }
+				size = { width = 80% height = 80% }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+			
+			gridboxtype = {	
+				name = "turret_mounted_mg_tech_tree"
+				position = { x = 70% y = 172 }
+				size = { width = 80% height = 80% }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
 			#三人炮塔
 			gridboxtype = {
 				name = "three_man_turret_tech_tree"
